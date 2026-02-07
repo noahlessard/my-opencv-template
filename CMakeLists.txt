@@ -19,7 +19,7 @@ project ("opencvTemplateMain")
 # so Cmake will look there (where? depends on OpenCV_DIR), and set include_dirs and _libs.
 # Also need to tell OpenCV to use static .libs
 
-set(OpenCV_DIR "D:/cpp/opencv-4.x/build")
+set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/libs)
 set (OpenCV_STATIC ON)
 
 # make it required (just so it errors if it can't find)

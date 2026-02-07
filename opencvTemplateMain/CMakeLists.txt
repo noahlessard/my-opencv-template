@@ -45,7 +45,7 @@ target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 
 # set console setting
 # don't use option, it will get cached!
-set(ENABLE_CONSOLE OFF)
+set(ENABLE_CONSOLE ON)
 if(ENABLE_CONSOLE)
     # tell main program about it
     target_compile_definitions(${PROJECT_NAME} PRIVATE ENABLE_CONSOLE)
