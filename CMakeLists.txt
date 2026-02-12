@@ -35,8 +35,8 @@ set(OpenCV_LIBS
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 # Move needed asset files into the out folder
-file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME})
+file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR}/src)
 
 # then, move onto this sub-dirs cmakelists, 
-add_subdirectory ("opencvTemplateMain")
+add_subdirectory ("src")
 

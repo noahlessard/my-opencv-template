@@ -3,7 +3,10 @@
 #
 
 # Add source to this project's executable.
-add_executable (${PROJECT_NAME} "opencvTemplateMain.cpp" "opencvTemplateMain.h")
+
+# will need to rerun cmake every time, but this is easy in vscode
+file(GLOB SOURCES "*.cpp" "*.h")
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
@@ -45,7 +48,7 @@ target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 
 # set console setting
 # don't use option, it will get cached!
-set(ENABLE_CONSOLE ON)
+set(ENABLE_CONSOLE OFF)
 if(ENABLE_CONSOLE)
     # tell main program about it
     target_compile_definitions(${PROJECT_NAME} PRIVATE ENABLE_CONSOLE)
